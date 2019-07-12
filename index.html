@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="bg" id="bg">
+      
+    </div>
+
+    <script>
+      var bg = document.getElementById('bg');
+      var i = 0;
+      var imgs = ['img1.jpg',
+                  'img2.jpg',
+                  'img3.jpg'];
+      function changeImg() {
+        if (i == imgs.length) {
+          i = 0;
+        }
+        bg.style.backgroundImage = 'url('+imgs[i]+')';
+        i++;
+      }
+      changeImg();
+      setInterval(changeImg, 10000);
+      document.body.style.background = 'black';
+    </script>
+  </body>
+</html>
